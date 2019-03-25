@@ -99,34 +99,35 @@
 
 const checks = document.querySelectorAll("input[type='checkbox']");
 
-function getListOfCheckedBoxes(e) {
+function getListOfCheckedBoxes() {
   const checked = [];
   for (var i=0; i<checks.length; i++) {
     if (checks[i].checked) {
       checked.push(i);
     }
   }
-  console.log(checked);
-  console.log(e.shiftKey)
-  if (e.shiftKey && checked.length >= 2){
-    checkTheBoxes(checked);
-  }
   return checked;
 }
 
-function checkTheBoxes(arrayOfBoxes) {
-  console.log(arrayOfBoxes.length);
-  var min = arrayOfBoxes[0];
-  var max = arrayOfBoxes[arrayOfBoxes.length - 1];
-  console.log(min, max);
-  console.log(checks);
-  for (var i = min; i < max; i++) {
+function checkTheBoxes(checkedBoxesArray) {
+    var min = checkedBoxesArray[0];
+    var max = checkedBoxesArray[checkedBoxesArray.length - 1];
+    for (var i = min; i < max; i++) {
+      checks[i].checked = true;
+    }
 
-    checks[i].checked = true;
+}
+
+function checkboxes(e) {
+  const shiftKeyPressed = e.shiftKey;
+  const arrayOfBoxes = getListOfCheckedBoxes();
+  if (shiftKeyPressed && arrayOfBoxes.length >= 2) {
+    checkTheBoxes(arrayOfBoxes);
   }
 }
 
-window.addEventListener('click', getListOfCheckedBoxes);
+// window.addEventListener('click', getListOfCheckedBoxes);
+window.addEventListener('click', checkboxes);
 
 </script>
 </body>
