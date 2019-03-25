@@ -96,38 +96,39 @@
   </div>
 
 <script>
+// My solution
+// const checks = document.querySelectorAll("input[type='checkbox']");
 
-const checks = document.querySelectorAll("input[type='checkbox']");
+// function getListOfCheckedBoxes() {
+//   const checked = [];
+//   for (var i=0; i<checks.length; i++) {
+//     if (checks[i].checked) {
+//       checked.push(i);
+//     }
+//   }
+//   return checked;
+// }
 
-function getListOfCheckedBoxes() {
-  const checked = [];
-  for (var i=0; i<checks.length; i++) {
-    if (checks[i].checked) {
-      checked.push(i);
-    }
-  }
-  return checked;
-}
+// function checkTheBoxes(checkedBoxesArray) {
+//     var min = checkedBoxesArray[0];
+//     var max = checkedBoxesArray[checkedBoxesArray.length - 1];
+//     for (var i = min; i < max; i++) {
+//       checks[i].checked = true;
+//     }
 
-function checkTheBoxes(checkedBoxesArray) {
-    var min = checkedBoxesArray[0];
-    var max = checkedBoxesArray[checkedBoxesArray.length - 1];
-    for (var i = min; i < max; i++) {
-      checks[i].checked = true;
-    }
+// }
 
-}
-
-function checkboxes(e) {
-  const shiftKeyPressed = e.shiftKey;
-  const arrayOfBoxes = getListOfCheckedBoxes();
-  if (shiftKeyPressed && arrayOfBoxes.length >= 2) {
-    checkTheBoxes(arrayOfBoxes);
-  }
-}
+// function checkboxes(e) {
+//   const shiftKeyPressed = e.shiftKey;
+//   const arrayOfBoxes = getListOfCheckedBoxes();
+//   if (shiftKeyPressed && arrayOfBoxes.length >= 2) {
+//     checkTheBoxes(arrayOfBoxes);
+//   }
+// }
 
 // window.addEventListener('click', getListOfCheckedBoxes);
-window.addEventListener('click', checkboxes);
+// window.addEventListener('click', checkboxes);
+
 
 </script>
 </body>
