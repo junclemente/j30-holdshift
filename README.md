@@ -12,4 +12,4 @@ This project is a practice in writing vanilla JavaScript and to learn about othe
 
 
 #### Project takeaways
-
+I was able to create a solution that was similar in functionality to Wes' code. It's not as elegant but it works.
