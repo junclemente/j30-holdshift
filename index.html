@@ -96,6 +96,23 @@
   </div>
 
 <script>
+
+const checks = document.querySelectorAll("input[type='checkbox']");
+
+function getListOfCheckedBoxes(e) {
+  const checked = [];
+  for (var i=0; i<checks.length; i++) {
+    if (checks[i].checked) {
+      checked.push(i);
+    }
+  }
+  console.log(checked);
+  console.log(e.shiftKey);
+  return checked;
+}
+
+window.addEventListener('click', getListOfCheckedBoxes);
+
 </script>
 </body>
 </html>
