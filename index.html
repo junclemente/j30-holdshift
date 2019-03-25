@@ -129,6 +129,13 @@
 // window.addEventListener('click', getListOfCheckedBoxes);
 // window.addEventListener('click', checkboxes);
 
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+function handleCheck(e){
+
+}
+
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
 
 </script>
 </body>
