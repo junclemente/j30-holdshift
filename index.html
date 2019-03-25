@@ -107,8 +107,23 @@ function getListOfCheckedBoxes(e) {
     }
   }
   console.log(checked);
-  console.log(e.shiftKey);
+  console.log(e.shiftKey)
+  if (e.shiftKey && checked.length >= 2){
+    checkTheBoxes(checked);
+  }
   return checked;
+}
+
+function checkTheBoxes(arrayOfBoxes) {
+  console.log(arrayOfBoxes.length);
+  var min = arrayOfBoxes[0];
+  var max = arrayOfBoxes[arrayOfBoxes.length - 1];
+  console.log(min, max);
+  console.log(checks);
+  for (var i = min; i < max; i++) {
+
+    checks[i].checked = true;
+  }
 }
 
 window.addEventListener('click', getListOfCheckedBoxes);
